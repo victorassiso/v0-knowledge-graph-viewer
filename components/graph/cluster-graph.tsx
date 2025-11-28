@@ -3,8 +3,10 @@
 import { useEffect, useRef, useState, useCallback } from "react"
 import * as d3 from "d3"
 import { reports, graphLinks, clusterColors } from "@/data/reports"
+import { getClusterRelationship } from "@/data/links"
 import { useGraphContext } from "@/lib/graph-context"
 import { useTheme } from "next-themes"
+import { EdgePopover, type EdgePopoverData } from "./edge-popover"
 
 interface ClusterNode extends d3.SimulationNodeDatum {
   id: string
@@ -25,6 +27,12 @@ export function ClusterGraph() {
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
   const { enterClusterDetail } = useGraphContext()
   const { resolvedTheme } = useTheme()
+
+  const [edgePopover, setEdgePopover] = useState<{
+    data: EdgePopoverData | null
+    position: { x: number; y: number } | null
+    visible: boolean
+  }>({ data: null, position: null, visible: false })
 
   const handleResize = useCallback(() => {
     if (containerRef.current) {
@@ -144,7 +152,6 @@ export function ClusterGraph() {
         d3.forceCollide().radius((d) => (d as ClusterNode).reportCount * 12 + 40),
       )
 
-    // Draw links
     const link = g
       .append("g")
       .attr("class", "links")
@@ -155,6 +162,53 @@ export function ClusterGraph() {
       .attr("stroke", isDark ? "#3f3f46" : "#d4d4d8")
       .attr("stroke-opacity", 0.5)
       .attr("stroke-width", (d) => Math.sqrt(d.weight) * 2)
+      .style("cursor", "pointer")
+      .on("mouseover", function (event, d) {
+        // Visual feedback on hover
+        d3.select(this)
+          .transition()
+          .duration(150)
+          .attr("stroke-opacity", 0.9)
+          .attr("stroke-width", Math.sqrt(d.weight) * 3 + 2)
+          .attr("stroke", isDark ? "#71717a" : "#a1a1aa")
+
+        // Get cluster relationship metadata
+        const linkData = d as { source: string | ClusterNode; target: string | ClusterNode; weight: number }
+        const sourceId = typeof linkData.source === "string" ? linkData.source : linkData.source.id
+        const targetId = typeof linkData.target === "string" ? linkData.target : linkData.target.id
+
+        const relationship = getClusterRelationship(sourceId, targetId)
+
+        if (relationship) {
+          setEdgePopover({
+            data: {
+              sourceTitle: sourceId,
+              targetTitle: targetId,
+              description: relationship.description,
+              similarities: relationship.similarities,
+              differences: relationship.differences,
+            },
+            position: { x: event.pageX, y: event.pageY },
+            visible: true,
+          })
+        }
+      })
+      .on("mousemove", (event) => {
+        setEdgePopover((prev) => ({
+          ...prev,
+          position: { x: event.pageX, y: event.pageY },
+        }))
+      })
+      .on("mouseout", function (event, d) {
+        d3.select(this)
+          .transition()
+          .duration(150)
+          .attr("stroke-opacity", 0.5)
+          .attr("stroke-width", Math.sqrt(d.weight) * 2)
+          .attr("stroke", isDark ? "#3f3f46" : "#d4d4d8")
+
+        setEdgePopover((prev) => ({ ...prev, visible: false }))
+      })
 
     // Draw nodes
     const node = g
@@ -293,6 +347,7 @@ export function ClusterGraph() {
         className="pointer-events-none absolute z-50 max-w-xs rounded-lg border border-border bg-card p-3 opacity-0 shadow-xl transition-opacity"
         style={{ position: "fixed" }}
       />
+      <EdgePopover data={edgePopover.data} position={edgePopover.position} visible={edgePopover.visible} />
     </div>
   )
 }

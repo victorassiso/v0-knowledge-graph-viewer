@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState, useCallback } from "react"
 import * as d3 from "d3"
 import { type ReportNode, reports, graphLinks, clusterColors } from "@/data/reports"
+import { getLinkMetadata } from "@/data/links"
 import { useTheme } from "next-themes"
+import { EdgePopover, type EdgePopoverData } from "./edge-popover"
 
 interface KnowledgeGraphProps {
   onNodeClick: (node: ReportNode) => void
@@ -29,6 +31,12 @@ export function KnowledgeGraph({ onNodeClick, selectedCluster }: KnowledgeGraphP
   const containerRef = useRef<HTMLDivElement>(null)
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 })
   const { resolvedTheme } = useTheme()
+
+  const [edgePopover, setEdgePopover] = useState<{
+    data: EdgePopoverData | null
+    position: { x: number; y: number } | null
+    visible: boolean
+  }>({ data: null, position: null, visible: false })
 
   const handleResize = useCallback(() => {
     if (containerRef.current) {
@@ -110,7 +118,6 @@ export function KnowledgeGraph({ onNodeClick, selectedCluster }: KnowledgeGraphP
     feMerge.append("feMergeNode").attr("in", "coloredBlur")
     feMerge.append("feMergeNode").attr("in", "SourceGraphic")
 
-    // Draw links
     const link = g
       .append("g")
       .attr("class", "links")
@@ -121,6 +128,55 @@ export function KnowledgeGraph({ onNodeClick, selectedCluster }: KnowledgeGraphP
       .attr("stroke", isDark ? "#3f3f46" : "#d4d4d8")
       .attr("stroke-opacity", 0.4)
       .attr("stroke-width", 1.5)
+      .style("cursor", "pointer")
+      .on("mouseover", function (event, d) {
+        // Visual feedback on hover
+        d3.select(this)
+          .transition()
+          .duration(150)
+          .attr("stroke-opacity", 0.9)
+          .attr("stroke-width", 4)
+          .attr("stroke", isDark ? "#71717a" : "#a1a1aa")
+
+        // Get link metadata
+        const linkData = d as { source: string | SimulationNode; target: string | SimulationNode }
+        const sourceId = typeof linkData.source === "string" ? linkData.source : linkData.source.id
+        const targetId = typeof linkData.target === "string" ? linkData.target : linkData.target.id
+
+        const metadata = getLinkMetadata(sourceId, targetId)
+        const sourceNode = filteredNodes.find((n) => n.id === sourceId)
+        const targetNode = filteredNodes.find((n) => n.id === targetId)
+
+        if (metadata && sourceNode && targetNode) {
+          setEdgePopover({
+            data: {
+              sourceTitle: sourceNode.title.slice(0, 30) + (sourceNode.title.length > 30 ? "..." : ""),
+              targetTitle: targetNode.title.slice(0, 30) + (targetNode.title.length > 30 ? "..." : ""),
+              description: metadata.description,
+              similarities: metadata.similarities,
+              differences: metadata.differences,
+            },
+            position: { x: event.pageX, y: event.pageY },
+            visible: true,
+          })
+        }
+      })
+      .on("mousemove", (event) => {
+        setEdgePopover((prev) => ({
+          ...prev,
+          position: { x: event.pageX, y: event.pageY },
+        }))
+      })
+      .on("mouseout", function () {
+        d3.select(this)
+          .transition()
+          .duration(150)
+          .attr("stroke-opacity", 0.4)
+          .attr("stroke-width", 1.5)
+          .attr("stroke", isDark ? "#3f3f46" : "#d4d4d8")
+
+        setEdgePopover((prev) => ({ ...prev, visible: false }))
+      })
 
     // Draw nodes
     const node = g
@@ -287,6 +343,7 @@ export function KnowledgeGraph({ onNodeClick, selectedCluster }: KnowledgeGraphP
         className="pointer-events-none absolute z-50 max-w-xs rounded-lg border border-border bg-card p-3 opacity-0 shadow-xl transition-opacity"
         style={{ position: "fixed" }}
       />
+      <EdgePopover data={edgePopover.data} position={edgePopover.position} visible={edgePopover.visible} />
     </div>
   )
 }
