@@ -19,350 +19,402 @@ export const clusterColors: Record<string, string> = {
   "soberania nacional": "#22c55e",
   "liberdade de expressão": "#eab308",
   "IA e sociedade": "#ec4899",
+  "gestão do conhecimento": "#a855f7",
+  "cibersegurança": "#ef4444",
+  "inclusão digital": "#10b981",
+  "ética em IA": "#f59e0b",
 }
 
 export const reports: ReportNode[] = [
   {
     id: "1",
-    title: "Vieses Algorítmicos em Sistemas de Recrutamento",
-    cluster: "vieses",
-    summary:
-      "Análise dos vieses presentes em algoritmos de seleção de candidatos e seus impactos na diversidade corporativa.",
-    content: `Este estudo examina como os algoritmos de recrutamento automatizado podem perpetuar e amplificar preconceitos existentes na sociedade.
+    title: "Decodificando a Intenção Humana: IA na Engenharia Biomédica",
+    cluster: "privacidade",
+    summary: "Uma análise sobre como os sLLMs locais garantem a soberania dos dados clínicos enquanto enfrentam o desafio dos vieses algorítmicos.",
+    content: `## **Palavras-chave**
 
-## Introdução
-A crescente adoção de sistemas de inteligência artificial no processo de recrutamento levanta questões importantes sobre equidade e justiça. Estes sistemas, treinados com dados históricos, frequentemente reproduzem padrões discriminatórios.
+- SLLMs
 
-## Metodologia
-Foram analisados 15 sistemas de recrutamento utilizados por empresas brasileiras, avaliando suas decisões em relação a gênero, raça e idade dos candidatos.
+- engenharia biomédica
 
-## Resultados
-Os resultados indicam que 73% dos sistemas apresentaram algum tipo de viés mensurável, com discriminação mais acentuada contra mulheres em cargos técnicos e candidatos acima de 45 anos.
+- privacidade dos dados
 
-## Conclusão
-É fundamental implementar auditorias regulares e mecanismos de transparência para garantir que sistemas de IA não perpetuem discriminação no mercado de trabalho.`,
-    links: ["2", "6", "11"],
+- entrevista motivacional
+
+- linguagem natural
+
+
+
+## **Introdução**
+
+
+
+A aplicação de Modelos Grandes de Linguagem Pequenos (sLLMs) na área da saúde visa decodificar a subjetividade humana, convertendo nuances emocionais e intenções comunicativas em conhecimento estruturado. Contudo, a adoção dessas ferramentas exige uma abordagem que priorize a privacidade absoluta e a ética, mitigando riscos associados ao uso de nuvens externas.
+
+
+
+Foram conduzidos dois experimentos utilizando IA local (modelos Phi-4 e Llama 3.2) para análise de valência hedônica e classificação de intenções em entrevistas motivacionais. Os resultados comprovam a viabilidade técnica da execução local, embora alertem para desafios críticos como o viés de centralidade e a dependência de contexto histórico para decisões clínicas precisas.`,
+    links: ["2", "4", "7", "10"],
   },
   {
     id: "2",
-    title: "Discriminação de Gênero em Modelos de Linguagem",
-    cluster: "vieses",
-    summary: "Investigação sobre como modelos de linguagem reproduzem estereótipos de gênero em suas saídas.",
-    content: `Este trabalho investiga a presença de estereótipos de gênero em grandes modelos de linguagem e propõe métricas para sua avaliação.
+    title: "TerapIA — O Uso da Inteligência Artificial na Psicoterapia",
+    cluster: "ética em IA",
+    summary: "Uma reflexão crítica sobre como chatbots de IA podem apoiar — mas não substituir — o cuidado humano na saúde mental.",
+    content: `## **Palavras-chave**
 
-## Contextualização
-Os modelos de linguagem são treinados com grandes volumes de texto da internet, absorvendo padrões culturais e sociais, incluindo preconceitos.
+- psicoterapia
 
-## Análise Realizada
-Foram testados diversos prompts relacionados a profissões, características pessoais e papéis sociais em três modelos de linguagem populares.
+- vieses algorítmicos
 
-## Descobertas Principais
-- Profissões técnicas são associadas predominantemente ao gênero masculino
-- Adjetivos emocionais são mais frequentes em contextos femininos
-- Modelos mais recentes apresentam menos viés, mas ainda significativo
+- solução híbrida
 
-## Recomendações
-Sugerimos a implementação de técnicas de debiasing durante o treinamento e a criação de benchmarks específicos para avaliação contínua.`,
-    links: ["1", "6"],
+- privacidade de dados
+
+- ética
+
+
+
+## **Introdução**
+
+A crescente popularização de sistemas de inteligência artificial no campo da saúde mental abre novas possibilidades de acesso, suporte e personalização, mas também levanta dilemas éticos e limitações importantes.  
+
+No relatório, investigam-se os mecanismos de funcionamento de chatbots terapêuticos, seus impactos sobre o vínculo clínico e as fronteiras entre apoio tecnológico e cuidado humano. A análise abrange desde benefícios como acessibilidade e redução do estigma até riscos como dependência emocional, padronização de respostas e vulnerabilidades de privacidade.  
+
+O texto convida o leitor a refletir sobre o futuro da psicoterapia em um cenário híbrido, onde a IA atua como ferramenta complementar — jamais substituta — da complexidade insubstituível do terapeuta humano.`,
+    links: ["1", "7", "4"],
   },
   {
     id: "3",
-    title: "LGPD e o Direito ao Esquecimento Digital",
-    cluster: "privacidade",
-    summary: "Estudo sobre a aplicação do direito ao esquecimento no contexto da Lei Geral de Proteção de Dados.",
-    content: `Análise jurídica e técnica sobre os desafios de implementação do direito ao esquecimento digital no Brasil.
+    title: "O Impacto da Inteligência Artificial na Cibersegurança",
+    cluster: "cibersegurança",
+    summary: "Uma análise sobre como a IA amplifica ameaças cibernéticas enquanto revoluciona os mecanismos de defesa e impacta a sociedade.",
+    content: `## **Palavras-chave**
 
-## Fundamentação Legal
-A LGPD estabelece o direito do titular de solicitar a eliminação de seus dados pessoais, mas a implementação prática enfrenta diversos obstáculos.
+- cibersegurança
 
-## Desafios Técnicos
-- Sistemas distribuídos dificultam a remoção completa
-- Backups e caches podem manter cópias dos dados
-- Machine learning pode ter "memorizado" informações pessoais
+- inteligência artificial
 
-## Casos Analisados
-Foram estudados 50 pedidos de eliminação de dados em empresas brasileiras, analisando o tempo de resposta e a efetividade da remoção.
+- deepfakes
 
-## Propostas de Solução
-O estudo propõe um framework técnico-jurídico para garantir a efetiva implementação do direito ao esquecimento em sistemas de IA.`,
-    links: ["4", "5", "10"],
+- phishing automatizado
+
+- letramento digital
+
+- conscientização
+
+
+
+## **Introdução**
+
+A transformação digital integrou a Inteligência Artificial ao cotidiano, tornando-a uma ferramenta central tanto para a economia quanto para a segurança digital.Este relatório explora a dualidade da IA: por um lado, potencializa ameaças como *phishing* altamente personalizado, malwares adaptativos e *deepfakes* que manipulam a realidade.
+
+Por outro lado, o texto detalha como a IA é essencial para a defesa moderna, permitindo a detecção proativa de anomalias e respostas automatizadas. Aborda-se, ainda, o impacto social dessa tecnologia e a urgência do letramento digital para proteger o fator humano, frequentemente o elo mais vulnerável da segurança.`,
+    links: ["6", "7", "10", "9"],
   },
   {
     id: "4",
-    title: "Anonimização de Dados em Datasets de Treinamento",
+    title: "Aprendizado Federado: Um Novo Método para Treinamento Distribuído de Modelos",
     cluster: "privacidade",
-    summary: "Técnicas e limitações da anonimização de dados pessoais utilizados no treinamento de modelos de IA.",
-    content: `Este relatório examina as técnicas atuais de anonimização e seus limites frente a ataques de reidentificação.
+    summary: "Uma abordagem inovadora que permite o treinamento colaborativo de modelos de IA preservando a privacidade e a eficiência em redes distribuídas.",
+    content: `## **Palavras-chave**
 
-## O Problema da Anonimização
-Dados considerados anônimos podem ser reidentificados quando combinados com outras fontes de informação, comprometendo a privacidade dos indivíduos.
+- aprendizado federado
 
-## Técnicas Avaliadas
-- K-anonimato
-- L-diversidade
-- Privacidade diferencial
-- Generalização e supressão
+- privacidade de dados
 
-## Experimentos Realizados
-Testamos a resistência de cada técnica contra ataques de linkage em um dataset de saúde com 100.000 registros.
+- inteligência artificial distribuída
 
-## Resultados
-A privacidade diferencial mostrou-se mais robusta, porém com maior impacto na utilidade dos dados para treinamento de modelos.`,
-    links: ["3", "9"],
+- computação assíncrona
+
+
+
+## **Introdução**
+
+A dependência tradicional de servidores centralizados para o treinamento de Inteligência Artificial enfrenta hoje barreiras críticas relacionadas à proteção de dados sensíveis e aos custos de transmissão. O Aprendizado Federado inverte essa lógica, permitindo que dispositivos aprendam localmente e compartilhem apenas conhecimento, sem expor as informações brutas.
+
+Este trabalho analisa a viabilidade técnica e ética desse método através de casos de uso na predição de doenças e mobilidade urbana. Além disso, apresenta experimentos práticos comparando arquiteturas síncronas e assíncronas, demonstrando como a abordagem assíncrona oferece maior robustez e eficiência em cenários reais de conexão instável e dados heterogêneos.`,
+    links: ["1", "2", "7"],
   },
   {
     id: "5",
-    title: "Governança de Dados em Instituições Públicas",
-    cluster: "governança de dados",
-    summary: "Framework para implementação de governança de dados em órgãos do governo federal brasileiro.",
-    content: `Proposta de modelo de governança de dados adaptado à realidade das instituições públicas brasileiras.
+    title: "Spotify e investimentos",
+    cluster: "IA e sociedade",
+    summary: "Relação entre Investimentos e Músicas",
+    content: `## **Palavras-chave**
 
-## Contexto Institucional
-As instituições públicas brasileiras enfrentam desafios únicos na gestão de dados, incluindo sistemas legados, cultura organizacional e restrições orçamentárias.
+- finanças comportamentais
 
-## Modelo Proposto
-O framework propõe cinco pilares:
-1. Estrutura organizacional com papéis definidos
-2. Políticas e procedimentos documentados
-3. Arquitetura de dados integrada
-4. Gestão da qualidade de dados
-5. Conformidade e segurança
+- perfil pessoal
 
-## Implementação Piloto
-O modelo foi testado em três órgãos federais durante 12 meses, com resultados positivos em termos de qualidade de dados e conformidade regulatória.
+- perfil de investidor
 
-## Lições Aprendidas
-A mudança cultural foi identificada como o maior desafio, requerendo programas contínuos de capacitação e engajamento.`,
-    links: ["3", "9", "10"],
+- análise de dados
+
+- gestão de portfólio
+
+
+
+## **Introdução**
+
+O trabalho **"Spotify e Investimentos"**, explora a correlação entre preferências musicais e o perfil de risco financeiro (investimentos). Através da análise de métricas de áudio extraídas da **API do Spotify** — como *energia*, *valência* e *acusticidade* — o sistema propõe um modelo que classifica o usuário em três perfis de investidor: **Conservador**, **Moderado** ou **Agressivo**.
+
+
+
+Além da classificação comportamental, o projeto aplica modelos matemáticos de **autorregressão** para prever a volatilidade e o retorno de ativos (como o Ibovespa) e sugere alocações de carteira personalizadas por perfil contendo Renda Fixa, Ações e Criptomoedas.`,
+    links: [],
   },
   {
     id: "6",
-    title: "Impactos Sociais da IA Generativa",
+    title: "O Fim da Realidade Única",
     cluster: "IA e sociedade",
-    summary: "Análise dos impactos da IA generativa no mercado de trabalho criativo e na produção de conhecimento.",
-    content: `Estudo interdisciplinar sobre as transformações sociais provocadas pela popularização de ferramentas de IA generativa.
+    summary: "Como a Inteligência Artificial fragmenta a verdade e ameaça a construção do conhecimento.",
+    content: `## **Palavras-chave**
 
-## Panorama Atual
-A explosão de ferramentas como ChatGPT, Midjourney e similares está transformando rapidamente diversas profissões e a forma como produzimos conhecimento.
+IA, 
 
-## Setores Analisados
-- Produção de conteúdo escrito
-- Design gráfico e ilustração
-- Programação de software
-- Educação e pesquisa acadêmica
+deepfake
 
-## Impactos Identificados
-- Automatização de tarefas rotineiras
-- Necessidade de requalificação profissional
-- Questões sobre autoria e originalidade
-- Democratização do acesso a ferramentas criativas
+desinformação
 
-## Cenários Futuros
-Projetamos três cenários para os próximos 10 anos, variando de integração harmoniosa a disrupção significativa do mercado de trabalho.`,
-    links: ["1", "2", "7", "12"],
+bolhas de filtro
+
+gestão do conhecimento
+
+manipulação algorítmica
+
+
+
+## **Introdução:**
+
+Este texto apresenta uma análise crítica sobre como a Inteligência Artificial tem acelerado o colapso da "realidade única", ampliando a manipulação de massas por meio de perfilagem psicológica, reforço algorítmico de vieses e produção de mídia sintética. A partir da ótica da Gestão do Conhecimento, o trabalho discute como esses fenômenos comprometem os processos de aquisição, validação e compartilhamento do conhecimento, exigindo novas estratégias organizacionais baseadas em ceticismo, validação cruzada e competências digitais defensivas.`,
+    links: ["3", "7", "8", "10", "12"],
   },
   {
     id: "7",
-    title: "Soberania Digital e Dependência Tecnológica",
-    cluster: "soberania nacional",
-    summary: "Análise da dependência brasileira de infraestrutura tecnológica estrangeira e seus riscos estratégicos.",
-    content: `Este trabalho examina os riscos da dependência de tecnologias estrangeiras para a soberania digital brasileira.
+    title: "Vieses em Modelos de IA: Dos Algoritmos de Machine Learning aos LLMs",
+    cluster: "vieses",
+    summary: "Uma análise crítica sobre como a inteligência artificial, ao aprender padrões do mundo real, internaliza e replica distorções e desigualdades sociais.",
+    content: `## **Palavras-chave**
 
-## Diagnóstico da Situação Atual
-O Brasil depende majoritariamente de:
-- Cloud computing de provedores americanos
-- Sistemas operacionais e software de base estrangeiros
-- Hardware importado
-- Modelos de IA desenvolvidos no exterior
+- vieses algorítmicos
 
-## Riscos Identificados
-- Vulnerabilidade a sanções internacionais
-- Falta de controle sobre dados sensíveis
-- Dependência em infraestrutura crítica
-- Limitações ao desenvolvimento tecnológico nacional
+- machine learning
 
-## Iniciativas Existentes
-Mapeamos 23 iniciativas governamentais e privadas voltadas ao desenvolvimento de tecnologia nacional.
+- LLMs
 
-## Recomendações Estratégicas
-Propomos uma política integrada de fomento à tecnologia nacional, com foco em áreas estratégicas como IA, semicondutores e computação em nuvem.`,
-    links: ["8", "6", "10"],
+- ética em IA
+
+- letramento digital
+
+
+
+## **Introdução**
+
+Este relatório aborda um desafio da gestão do conhecimento atual: a presença de vieses em sistemas de inteligência artificial. O texto discute que a IA não cria conhecimento do zero, mas extrai padrões de dados humanos que carregam valores históricos e exclusões culturais.
+
+
+
+A análise percorre desde os fundamentos dos modelos clássicos, onde a escolha manual de variáveis já introduzia discriminação, até os atuais Large Language Models (LLMs). Discute-se como o treinamento massivo com dados da internet faz com que esses modelos absorvam estereótipos e discursos tóxicos em escala. Por fim, reforça-se a necessidade de supervisão humana e o desenvolvimento de letramento digital para interpretar criticamente as respostas da IA.`,
+    links: ["1", "2", "6", "8", "10"],
   },
   {
     id: "8",
-    title: "Regulação de IA e Proteção da Liberdade de Expressão",
-    cluster: "liberdade de expressão",
-    summary:
-      "Tensões entre a necessidade de regulação de conteúdo gerado por IA e a garantia da liberdade de expressão.",
-    content: `Análise jurídica das tensões entre regulação de IA e direitos fundamentais de expressão.
+    title: "A Evolução do Conhecimento Coletivo na Internet: Dos Fóruns à Inteligência Artificial",
+    cluster: "gestão do conhecimento",
+    summary: "Uma análise da trajetória histórica do conhecimento digital, da colaboração em massa à síntese por IA, e seus impactos na Gestão do Conhecimento.",
+    content: `## **Palavras-chave**
 
-## O Dilema Regulatório
-A regulação de sistemas de IA que produzem ou moderam conteúdo online levanta questões complexas sobre liberdade de expressão.
+- inteligência coletiva
 
-## Casos Emblemáticos
-- Remoção automatizada de conteúdo legítimo
-- Vieses em sistemas de recomendação
-- Deepfakes e desinformação
-- Moderação de conteúdo político
+- gestão do conhecimento
 
-## Análise Comparada
-Comparamos as abordagens regulatórias da União Europeia, Estados Unidos, China e Brasil.
+- inteligência artificial
 
-## Proposta de Equilíbrio
-Sugerimos um modelo regulatório que equilibre a proteção contra danos com a preservação do espaço público de debate, incluindo mecanismos de transparência e recurso.`,
-    links: ["7", "6", "13"],
+- wikis
+
+- evolução digital
+
+
+
+## **Introdução**
+
+Este trabalho traça a trajetória do conhecimento coletivo na internet, identificando quatro fases distintas: os silos das comunidades iniciais (Fóruns/BBS), a era da colaboração em massa (Wikipédia), a fragmentação social (Redes Sociais) e a atual fronteira da síntese por Inteligência Artificial Generativa.
+
+
+
+A análise destaca uma mudança radical na disciplina de Gestão do Conhecimento (GC). O modelo tradicional, focado em armazenar e controlar um acervo interno ("arquivista"), tornou-se insuficiente. O novo desafio da GC é atuar como "navegador", desenvolvendo competências para filtrar, validar e integrar conhecimentos gerados em um ecossistema global, caótico e em tempo real.
+
+
+
+Conclui-se que o futuro da gestão do conhecimento reside em um modelo híbrido. Neste cenário, a IA assume tarefas de processamento e síntese de larga escala, enquanto os humanos assumem papéis de curadoria ética, validação crítica e questionamento estratégico.`,
+    links: ["6", "7", "12", "13"],
   },
   {
     id: "9",
-    title: "Qualidade de Dados para Machine Learning",
-    cluster: "governança de dados",
-    summary: "Métricas e processos para garantia de qualidade de dados utilizados em projetos de machine learning.",
-    content: `Framework para avaliação e melhoria da qualidade de dados em projetos de aprendizado de máquina.
+    title: "Metadados EXIF: Estrutura, Riscos e Impactos na Era Digital",
+    cluster: "privacidade",
+    summary: "Como dados invisíveis em uma foto podem revelar mais do que você imagina",
+    content: `## **Palavras-chave**
 
-## Importância da Qualidade de Dados
-A máxima "garbage in, garbage out" é especialmente relevante em ML, onde a qualidade dos dados determina diretamente a qualidade dos modelos.
+- vieses algorítmicos
 
-## Dimensões de Qualidade Avaliadas
-- Completude
-- Consistência
-- Acurácia
-- Atualidade
-- Unicidade
-- Conformidade
+- recrutamento automatizado
 
-## Metodologia Proposta
-Desenvolvemos um pipeline automatizado para avaliação contínua da qualidade de dados, integrado ao ciclo de vida de projetos de ML.
+- diversidade corporativa
 
-## Resultados Práticos
-A implementação do framework em cinco projetos resultou em melhoria média de 15% na performance dos modelos treinados.`,
-    links: ["4", "5", "11"],
+- equidade
+
+- justiça
+
+
+
+## **Introdução**
+
+A popularização das câmeras digitais e dos smartphones transformou cada fotografia em um pacote de dados invisíveis — os metadados EXIF. Esses registros, muitas vezes desconhecidos pelos usuários, podem incluir localização GPS, data, hora, modelo da câmera e diversas configurações técnicas. A análise do funcionamento interno do formato EXIF revela tanto sua utilidade quanto seus riscos. Casos reais, como o de John McAfee e o episódio do Burger King, demonstram como esses metadados podem expor pessoas, revelar crimes ou gerar consequências inesperadas. O relatório explora a estrutura técnica dos arquivos EXIF, suas vulnerabilidades, debates éticos e o impacto da preservação ou remoção desses dados por plataformas digitais.`,
+    links: ["3", "4", "10"],
   },
   {
     id: "10",
-    title: "Estratégia Nacional de Inteligência Artificial",
-    cluster: "soberania nacional",
-    summary: "Análise crítica da Estratégia Brasileira de Inteligência Artificial e propostas de aprimoramento.",
-    content: `Avaliação da EBIA e proposta de diretrizes complementares para o desenvolvimento de IA no Brasil.
+    title: "Necessidade do Letramento em IA na população brasileira",
+    cluster: "IA e sociedade",
+    summary: "Uma análise sobre os riscos da desinformação e a urgência da educação crítica em uma sociedade mediada por algoritmos.",
+    content: `## **Palavras-chave**
 
-## Contexto Internacional
-Mais de 60 países já publicaram estratégias nacionais de IA. O Brasil lançou sua estratégia em 2021.
+- letramento em IA
 
-## Análise da EBIA
-Pontos fortes:
-- Visão abrangente
-- Foco em pesquisa e inovação
-- Consideração de aspectos éticos
+- analfabetismo funcional
 
-Lacunas identificadas:
-- Financiamento insuficiente
-- Falta de metas mensuráveis
-- Desconexão entre academia e indústria
+- deepfakes
 
-## Benchmarking Internacional
-Comparamos a EBIA com estratégias de países como Canadá, Singapura e Alemanha.
+- desinformação
 
-## Propostas de Aprimoramento
-Sugerimos a criação de um fundo soberano para IA, incentivos fiscais específicos e programas de formação de talentos.`,
-    links: ["7", "5", "3"],
+- cidadania digital
+
+
+
+## **Introdução**
+
+O avanço acelerado da Inteligência Artificial (IA) transformou a forma como produzimos e interpretamos informações, tornando ferramentas algorítmicas parte constante do cotidiano. No Brasil, porém, essa mudança encontra um obstáculo estrutural: o alto índice de analfabetismo funcional, que afeta cerca de quatro em cada dez brasileiros e aumenta a vulnerabilidade diante das tecnologias digitais.
+
+
+
+Sem letramento em IA, grande parte da população tem dificuldade para identificar deepfakes, reconhecer conteúdos manipulados ou compreender decisões automatizadas, o que favorece golpes, desinformação e perda de confiança nas instituições. A sofisticação das ferramentas de geração de conteúdo torna ainda mais urgente capacitar cidadãos para verificar fontes, interpretar algoritmos e exercer uma participação crítica no ambiente digital.
+
+
+
+Assim, este relatório destaca a necessidade de consolidar o letramento em IA como um pilar da cidadania contemporânea, defendendo investimentos em educação crítica que permitam à sociedade usar e questionar a IA de maneira ética, consciente e responsável.`,
+    links: ["3", "6", "7", "11"],
   },
   {
     id: "11",
-    title: "Explicabilidade de Modelos de IA em Decisões Críticas",
-    cluster: "governança de dados",
-    summary: "Requisitos técnicos e normativos para explicabilidade de IA em contextos de alto risco.",
-    content: `Estudo sobre métodos de explicabilidade e sua aplicação em domínios críticos como saúde, justiça e finanças.
+    title: "Inclusão de Idosos ao Governo Digital: a ausência virtual do governo",
+    cluster: "inclusão digital",
+    summary: "Uma análise em como softwares do governo afastam a população idosa de seus direitos e afetam a inclusão digital na terceira idade.",
+    content: `## **Palavras-chave**
 
-## O Problema da Caixa Preta
-Modelos complexos de ML frequentemente operam como "caixas pretas", dificultando a compreensão de suas decisões.
+- idosos
 
-## Técnicas de Explicabilidade
-- LIME (Local Interpretable Model-agnostic Explanations)
-- SHAP (SHapley Additive exPlanations)
-- Attention visualization
-- Counterfactual explanations
+- inclusão digital
 
-## Requisitos Normativos
-A LGPD e o AI Act europeu estabelecem requisitos de explicabilidade que impactam projetos de IA no Brasil.
+- etarismo digital
 
-## Estudo de Caso
-Implementamos técnicas de explicabilidade em um modelo de análise de crédito, avaliando a compreensão das explicações por diferentes stakeholders.`,
-    links: ["1", "9", "6"],
+- golpes financeiros
+
+- direitos humanos
+
+
+
+## **Introdução**
+
+A exclusão digital vivida por muitos idosos tem se tornado um dos principais entraves para o uso efetivo dos serviços públicos digitais no Brasil. Apesar de dependerem cada vez mais de aplicativos e sistemas para acessar direitos básicos, grande parte encontra obstáculos simples, porém decisivos, como telas confusas, fontes pequenas e excesso de etapas. Isso não só dificulta o acesso a informações importantes, como também aumenta a vulnerabilidade a golpes e a dependência de outras pessoas para realizar tarefas cotidianas.
+
+A importância desse tema ganhou ainda mais destaque com a recente inclusão da "inclusão digital" no Estatuto da Pessoa Idosa, reforçando a necessidade de políticas públicas e ações educativas voltadas a esse público. Estudos mostram que escolaridade, renda e região influenciam diretamente o uso de serviços digitais, evidenciando o quanto a desigualdade tecnológica acompanha a desigualdade social. Diante disso, torna-se essencial pensar em soluções práticas que aproximem os idosos das tecnologias e fortaleçam sua autonomia no ambiente digital.`,
+    links: ["10"],
   },
   {
     id: "12",
-    title: "Desinformação Gerada por IA e Processos Democráticos",
-    cluster: "liberdade de expressão",
-    summary: "Impactos da desinformação produzida por IA generativa nas eleições e no debate público.",
-    content: `Análise dos riscos da IA generativa para a integridade da informação em contextos democráticos.
+    title: "FamilySearch: A maior árvore genealogica do mundo",
+    cluster: "gestão do conhecimento",
+    summary: "Como tecnologia, colaboração e memória se unem para preservar histórias familiares em escala global.",
+    content: `## **Palavras-chave**
 
-## Cenário de Ameaças
-A capacidade de gerar texto, áudio e vídeo convincentes em escala representa uma nova categoria de risco para processos democráticos.
+- genealogia digital  
 
-## Tipologia de Conteúdo Malicioso
-- Deepfakes de figuras políticas
-- Artigos e notícias falsas automatizadas
-- Perfis falsos em redes sociais
-- Manipulação de áudio em contexto eleitoral
+- gestão do conhecimento  
 
-## Estudos de Caso
-Analisamos incidentes documentados nas eleições de 2022 no Brasil e em outros países.
+- memória coletiva  
 
-## Contramedidas
-Propomos um conjunto de medidas técnicas, regulatórias e educacionais para mitigar os riscos identificados.`,
-    links: ["8", "6", "13"],
+- colaboração global   
+
+
+
+## **Introdução**
+
+O FamilySearch é hoje a maior e mais influente plataforma de genealogia do mundo, reunindo bilhões de registros históricos digitalizados e conectando pessoas por meio de árvores genealógicas colaborativas. O sistema combina práticas de gestão do conhecimento com tecnologia de ponta para preservar, organizar e compartilhar histórias familiares, permitindo que qualquer pessoa explore suas origens de forma gratuita.
+
+
+
+Mais do que um repositório de dados, o FamilySearch impulsiona uma rede global de usuários, eventos culturais e iniciativas educacionais. Suas inovações — como indexação automatizada, análise de imagens e ferramentas de tradução baseadas em IA — apontam para um futuro em que descobrir antepassados e compreender contextos históricos será cada vez mais rápido, acessível e preciso.`,
+    links: ["8", "13"],
   },
   {
     id: "13",
-    title: "Moderação Automatizada e Censura Algorítmica",
-    cluster: "liberdade de expressão",
-    summary: "Limites e problemas da moderação automatizada de conteúdo em plataformas digitais.",
-    content: `Investigação sobre os impactos da moderação algorítmica na liberdade de expressão online.
+    title: "Gestão do Conhecimento na Engenharia de Software",
+    cluster: "gestão do conhecimento",
+    summary: "Como ferramentas integradas apoiam o fluxo de criação, organização e compartilhamento de conhecimento técnico na engenharia de software",
+    content: `## **Palavras-chave**
 
-## O Papel das Plataformas
-Grandes plataformas utilizam IA para moderar bilhões de peças de conteúdo diariamente, com implicações significativas para a liberdade de expressão.
+- Gestão do conhecimento
 
-## Problemas Identificados
-- Remoções injustificadas de conteúdo legítimo
-- Vieses contra grupos minoritários
-- Falta de transparência nos critérios
-- Mecanismos de recurso inadequados
+- Engenharia de software
 
-## Metodologia de Pesquisa
-Coletamos e analisamos 10.000 casos de moderação em três plataformas principais.
+- Ferramentas digitais colaborativas
 
-## Resultados
-Encontramos taxas de erro significativas e padrões de discriminação algorítmica, especialmente contra conteúdo em português.
+- Ecossistemas digitais
 
-## Propostas de Melhoria
-Sugerimos requisitos de transparência, auditorias independentes e mecanismos robustos de recurso humano.`,
-    links: ["8", "12", "6"],
+- Documentação técnica
+
+
+
+## **Introdução**
+
+A engenharia de software moderna depende profundamente da capacidade de capturar, organizar e disseminar conhecimento dentro de equipes que operam em ambientes de alta complexidade, mudanças constantes e grande volume de informação. Nesse contexto, a gestão do conhecimento deixa de ser um conceito abstrato e passa a ser uma necessidade prática e cotidiana: sem mecanismos claros de registro, compartilhamento e integração, o trabalho técnico se fragmenta, decisões se perdem e a comunicação entre equipes se torna ineficiente.
+
+Este relatório apresenta um estudo de caso sobre como um ecossistema digital — composto por ferramentas como GitHub, Notion, Slack, Linear, VSCode, Figma, Incident.io e Grafana — sustenta o fluxo de conhecimento em uma empresa de engenharia de software com mais de 900 funcionários. A partir da análise do papel individual de cada ferramenta e de suas integrações, o relatório discute como conhecimento tácito e explícito se convertem em práticas reais de colaboração, documentação, coordenação e tomada de decisão técnica.`,
+    links: ["8", "12"],
   },
   {
     id: "14",
-    title: "Privacidade em Sistemas de Reconhecimento Facial",
-    cluster: "privacidade",
-    summary: "Análise dos riscos à privacidade do uso de reconhecimento facial em espaços públicos.",
-    content: `Estudo sobre a implantação de sistemas de reconhecimento facial no Brasil e seus impactos na privacidade.
+    title: "Impactos Cognitivos da Internet",
+    cluster: "IA e sociedade",
+    summary: "Como o ambiente digital influencia atenção, memória e sociabilidade humanas",
+    content: `## **Palavras-chave**
 
-## Panorama da Adoção
-O reconhecimento facial está sendo adotado rapidamente em:
-- Segurança pública
-- Controle de acesso
-- Autenticação bancária
-- Transporte público
 
-## Riscos à Privacidade
-- Vigilância massiva sem consentimento
-- Criação de perfis comportamentais
-- Erros de identificação com consequências graves
-- Uso por agentes privados sem regulação
 
-## Análise Legal
-A LGPD classifica dados biométricos como sensíveis, mas a aplicação prática é inconsistente.
+- atenção digital  
 
-## Recomendações
-Propomos uma moratória no uso de RF em espaços públicos até a criação de marco regulatório específico.`,
-    links: ["3", "4", "7"],
+- memória transacional  
+
+- sobrecarga informacional  
+
+- sociabilidade online  
+
+- efeitos cognitivos da Internet  
+
+
+
+## **Introdução**
+
+
+
+A expansão da Internet transformou a forma como as pessoas aprendem, trabalham, se relacionam e acessam informações. Embora os benefícios — como rapidez, disponibilidade e eficiência — sejam evidentes, seus efeitos cognitivos mais profundos ainda são motivo de estudo.  
+
+
+
+O relatório analisou como três dimensões fundamentais do funcionamento mental — **atenção**, **memória** e **sociabilidade** — são moldadas pelo uso contínuo de plataformas digitais. A partir de evidências empíricas e interpretações neurocientíficas, discutem-se mudanças comportamentais, adaptações neurais e implicações sociais decorrentes da interação intensa com ambientes digitais.`,
+    links: ["6", "8", "10"],
   },
 ]
 

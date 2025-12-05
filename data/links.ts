@@ -7,359 +7,361 @@ export interface ReportLink {
 }
 
 export const reportLinks: ReportLink[] = [
-  // vieses cluster connections
+  // Connections between healthcare AI articles
   {
     source: "1",
     target: "2",
-    description:
-      "Ambos os estudos analisam como sistemas de IA podem perpetuar e amplificar preconceitos sociais existentes.",
+    description: "Ambos os artigos exploram o uso de IA na área da saúde, com foco em privacidade de dados clínicos e dilemas éticos.",
     similarities: [
-      "Foco em vieses algorítmicos",
-      "Análise de discriminação em sistemas automatizados",
-      "Propostas de mitigação através de auditorias",
+      "Aplicação de IA em contextos de saúde",
+      "Preocupação com privacidade de dados sensíveis",
+      "Discussão sobre ética e limites da tecnologia",
+      "Análise de vieses algorítmicos em sistemas clínicos",
     ],
     differences: [
-      "Contexto: recrutamento vs. modelos de linguagem",
-      "Metodologia: análise de sistemas reais vs. testes de prompts",
-      "Tipo de viés: gênero/idade vs. estereótipos linguísticos",
+      "Foco: engenharia biomédica vs. psicoterapia",
+      "Tecnologia: sLLMs locais vs. chatbots terapêuticos",
+      "Abordagem: análise técnica vs. reflexão crítica sobre cuidado humano",
     ],
   },
   {
     source: "1",
-    target: "6",
-    description:
-      "Conexão entre vieses algorítmicos no mercado de trabalho e os impactos sociais mais amplos da IA generativa.",
+    target: "4",
+    description: "Ambos abordam métodos de IA que preservam a privacidade através de processamento local ou distribuído.",
     similarities: [
-      "Preocupação com impactos no mercado de trabalho",
-      "Análise de transformações sociais causadas por IA",
-      "Discussão sobre equidade e acesso",
+      "Foco em privacidade de dados sensíveis",
+      "Processamento local/distribuído em vez de nuvem centralizada",
+      "Aplicação em contextos que exigem proteção de dados",
+      "Análise de viabilidade técnica de abordagens descentralizadas",
     ],
     differences: [
-      "Escopo: específico (recrutamento) vs. amplo (sociedade)",
-      "Natureza da IA: sistemas de decisão vs. IA generativa",
-      "Foco temporal: problemas atuais vs. cenários futuros",
+      "Contexto: saúde clínica vs. treinamento distribuído geral",
+      "Tecnologia: sLLMs vs. aprendizado federado",
+      "Escopo: análise de dados clínicos vs. treinamento colaborativo de modelos",
     ],
   },
   {
     source: "1",
-    target: "11",
-    description:
-      "Relação entre vieses em sistemas de recrutamento e a necessidade de explicabilidade em decisões automatizadas.",
+    target: "7",
+    description: "Ambos discutem vieses algorítmicos, um no contexto de análise clínica e outro de forma mais ampla em modelos de IA.",
     similarities: [
-      "Foco em decisões de alto impacto sobre indivíduos",
-      "Necessidade de transparência algorítmica",
-      "Implicações legais e éticas",
+      "Análise de vieses algorítmicos",
+      "Preocupação com impactos de decisões automatizadas",
+      "Necessidade de supervisão humana",
+      "Discussão sobre ética em IA",
     ],
     differences: [
-      "Abordagem: identificação de vieses vs. métodos de explicação",
-      "Solução proposta: auditorias vs. técnicas de XAI",
-      "Público-alvo: gestores de RH vs. desenvolvedores de ML",
+      "Escopo: contexto clínico específico vs. análise geral de vieses",
+      "Foco: viés de centralidade em sLLMs vs. vieses em ML e LLMs",
+      "Abordagem: estudo experimental vs. análise teórica abrangente",
     ],
   },
   {
     source: "2",
-    target: "6",
-    description:
-      "Os estereótipos de gênero em modelos de linguagem são um aspecto específico dos impactos sociais da IA generativa.",
+    target: "7",
+    description: "Ambos analisam vieses algorítmicos, especialmente em contextos que envolvem interação humana e decisões sensíveis.",
     similarities: [
-      "Análise de modelos de linguagem",
-      "Preocupação com reprodução de padrões culturais",
-      "Discussão sobre responsabilidade dos desenvolvedores",
+      "Foco em vieses algorítmicos em sistemas de IA",
+      "Preocupação com ética e responsabilidade",
+      "Discussão sobre limites da tecnologia",
+      "Necessidade de supervisão humana",
     ],
     differences: [
-      "Escopo: viés de gênero específico vs. impactos gerais",
-      "Metodologia: testes controlados vs. análise qualitativa",
-      "Proposta: debiasing técnico vs. políticas públicas",
+      "Contexto: saúde mental vs. análise geral de vieses",
+      "Foco: chatbots terapêuticos vs. modelos de ML e LLMs",
+      "Perspectiva: cuidado humano vs. gestão do conhecimento",
     ],
   },
-  // privacidade cluster connections
   {
-    source: "3",
+    source: "2",
     target: "4",
-    description:
-      "Complementaridade entre o direito ao esquecimento e as técnicas de anonimização para proteção de dados pessoais.",
-    similarities: ["Foco em proteção de dados pessoais", "Desafios técnicos de implementação", "Base legal na LGPD"],
+    description: "Ambos abordam privacidade de dados em contextos sensíveis, um em saúde mental e outro em aprendizado federado.",
+    similarities: [
+      "Preocupação com privacidade de dados pessoais",
+      "Análise de vulnerabilidades de privacidade",
+      "Discussão sobre proteção de informações sensíveis",
+    ],
     differences: [
-      "Abordagem: jurídica vs. técnica",
-      "Momento: após coleta vs. antes do uso",
-      "Objetivo: eliminação vs. desidentificação",
+      "Contexto: psicoterapia vs. treinamento distribuído",
+      "Abordagem: reflexão crítica vs. análise técnica",
+      "Foco: cuidado humano vs. eficiência computacional",
+    ],
+  },
+  // Cybersecurity and disinformation connections
+  {
+    source: "3",
+    target: "6",
+    description: "Ambos discutem como a IA pode ser usada para manipular informações e criar conteúdo enganoso, incluindo deepfakes.",
+    similarities: [
+      "Análise de deepfakes e manipulação de mídia",
+      "Preocupação com desinformação",
+      "Impacto social da IA generativa",
+      "Necessidade de letramento digital",
+    ],
+    differences: [
+      "Foco: cibersegurança e defesa vs. gestão do conhecimento",
+      "Perspectiva: ameaças e defesas vs. fragmentação da verdade",
+      "Abordagem: análise técnica vs. análise crítica filosófica",
     ],
   },
   {
     source: "3",
-    target: "5",
-    description:
-      "A governança de dados em instituições públicas deve considerar o direito ao esquecimento dos cidadãos.",
+    target: "7",
+    description: "Ambos analisam riscos e desafios da IA, um focando em segurança cibernética e outro em vieses algorítmicos.",
     similarities: [
-      "Contexto do setor público brasileiro",
-      "Framework regulatório da LGPD",
-      "Necessidade de políticas claras",
+      "Análise de riscos da inteligência artificial",
+      "Preocupação com impactos sociais negativos",
+      "Necessidade de conscientização e educação",
+      "Discussão sobre letramento digital",
     ],
     differences: [
-      "Foco: direito individual vs. gestão institucional",
-      "Escopo: dados específicos vs. governança ampla",
-      "Implementação: sob demanda vs. proativa",
+      "Foco: ameaças cibernéticas vs. vieses e discriminação",
+      "Perspectiva: segurança vs. ética e justiça",
+      "Solução: defesa técnica vs. supervisão humana e debiasing",
     ],
   },
   {
     source: "3",
     target: "10",
-    description: "A estratégia nacional de IA deve incorporar garantias de privacidade como o direito ao esquecimento.",
+    description: "Ambos enfatizam a urgência do letramento digital e da conscientização sobre riscos da IA, especialmente deepfakes.",
     similarities: [
-      "Perspectiva de políticas públicas nacionais",
-      "Consideração de aspectos éticos",
-      "Proteção dos cidadãos brasileiros",
+      "Foco em letramento digital e conscientização",
+      "Preocupação com deepfakes e desinformação",
+      "Necessidade de educação crítica sobre IA",
+      "Análise de vulnerabilidades da população",
     ],
     differences: [
-      "Escopo: direito específico vs. estratégia ampla",
-      "Natureza: reativa vs. planejamento estratégico",
-      "Implementação: individual vs. nacional",
+      "Escopo: cibersegurança geral vs. letramento em IA específico",
+      "Perspectiva: defesa técnica vs. educação cidadã",
+      "Foco: ameaças cibernéticas vs. analfabetismo funcional no Brasil",
     ],
   },
   {
-    source: "4",
+    source: "3",
     target: "9",
-    description: "A qualidade dos dados anonimizados impacta diretamente os projetos de machine learning.",
+    description: "Ambos exploram riscos de privacidade relacionados a dados invisíveis ou metadados que podem expor informações pessoais.",
     similarities: [
-      "Foco em dados para ML",
-      "Trade-off entre utilidade e proteção",
-      "Métricas quantitativas de avaliação",
+      "Análise de riscos à privacidade",
+      "Foco em dados que podem expor informações pessoais",
+      "Discussão sobre vulnerabilidades digitais",
+      "Casos reais de exposição de dados",
     ],
     differences: [
-      "Objetivo: privacidade vs. qualidade",
-      "Perspectiva: proteção vs. performance",
-      "Técnicas: anonimização vs. limpeza de dados",
+      "Tipo de dado: metadados EXIF vs. dados de segurança cibernética",
+      "Foco: fotografia e localização vs. ameaças cibernéticas",
+      "Abordagem: análise técnica de formato vs. análise de ameaças",
     ],
   },
-  // governança de dados connections
-  {
-    source: "5",
-    target: "9",
-    description: "A qualidade de dados é um dos pilares fundamentais da governança de dados em qualquer instituição.",
-    similarities: [
-      "Frameworks estruturados de gestão",
-      "Métricas e indicadores de qualidade",
-      "Processos sistemáticos de melhoria",
-    ],
-    differences: [
-      "Escopo: institucional amplo vs. específico para ML",
-      "Contexto: setor público vs. projetos técnicos",
-      "Foco: governança vs. aplicação prática",
-    ],
-  },
-  {
-    source: "5",
-    target: "10",
-    description:
-      "A governança de dados nas instituições públicas é essencial para a implementação da estratégia nacional de IA.",
-    similarities: [
-      "Foco no setor público brasileiro",
-      "Necessidade de capacitação e mudança cultural",
-      "Alinhamento com políticas nacionais",
-    ],
-    differences: [
-      "Nível: operacional vs. estratégico",
-      "Abrangência: institucional vs. nacional",
-      "Horizonte temporal: imediato vs. longo prazo",
-    ],
-  },
-  {
-    source: "9",
-    target: "11",
-    description: "Dados de qualidade são pré-requisito para explicabilidade efetiva em modelos de machine learning.",
-    similarities: ["Contexto de projetos de ML", "Foco em melhoria de resultados", "Abordagem técnica estruturada"],
-    differences: [
-      "Fase: entrada vs. saída do modelo",
-      "Objetivo: alimentar vs. interpretar o modelo",
-      "Stakeholders: engenheiros de dados vs. usuários finais",
-    ],
-  },
-  // IA e sociedade connections
+  // Knowledge management connections
   {
     source: "6",
     target: "7",
-    description:
-      "Os impactos sociais da IA generativa incluem questões de soberania digital e dependência tecnológica.",
+    description: "Ambos discutem como a IA afeta a construção e validação do conhecimento, seja através de vieses ou fragmentação da verdade.",
     similarities: [
-      "Análise de transformações sociais amplas",
-      "Preocupação com futuro do Brasil",
-      "Discussão sobre autonomia e controle",
+      "Análise do impacto da IA no conhecimento",
+      "Preocupação com manipulação algorítmica",
+      "Discussão sobre vieses e distorções",
+      "Perspectiva de gestão do conhecimento",
     ],
     differences: [
-      "Foco: impactos sociais vs. geopolítica",
-      "Escala: individual/setorial vs. nacional",
-      "Solução: adaptação vs. independência tecnológica",
+      "Foco: fragmentação da verdade vs. vieses em modelos",
+      "Perspectiva: filosófica vs. técnica",
+      "Solução: ceticismo e validação vs. supervisão e debiasing",
     ],
   },
   {
     source: "6",
-    target: "12",
-    description:
-      "A IA generativa apresenta riscos tanto para o mercado de trabalho quanto para a integridade da informação democrática.",
-    similarities: ["Análise de riscos da IA generativa", "Impactos em escala social", "Necessidade de regulação"],
+    target: "8",
+    description: "Ambos analisam a evolução do conhecimento na era digital, um focando na fragmentação e outro na trajetória histórica.",
+    similarities: [
+      "Análise da evolução do conhecimento digital",
+      "Perspectiva de gestão do conhecimento",
+      "Discussão sobre o papel da IA",
+      "Análise de transformações na forma de produzir conhecimento",
+    ],
     differences: [
-      "Domínio: mercado de trabalho vs. democracia",
-      "Tipo de risco: econômico vs. informacional",
-      "Velocidade do impacto: gradual vs. imediato",
+      "Foco: fragmentação e manipulação vs. evolução histórica positiva",
+      "Tom: crítico sobre riscos vs. descritivo da trajetória",
+      "Solução: defesa crítica vs. modelo híbrido",
     ],
   },
-  // soberania nacional connections
+  {
+    source: "6",
+    target: "10",
+    description: "Ambos discutem desinformação e a necessidade de educação crítica para navegar em um ambiente digital manipulado.",
+    similarities: [
+      "Preocupação com desinformação",
+      "Foco em letramento digital e educação crítica",
+      "Análise de vulnerabilidades da população",
+      "Necessidade de competências defensivas",
+    ],
+    differences: [
+      "Perspectiva: gestão do conhecimento vs. cidadania digital",
+      "Foco: fragmentação da verdade vs. analfabetismo funcional",
+      "Solução: estratégias organizacionais vs. políticas educacionais",
+    ],
+  },
   {
     source: "7",
     target: "8",
-    description:
-      "A regulação de IA para proteção da liberdade de expressão deve considerar a soberania digital nacional.",
-    similarities: ["Perspectiva regulatória", "Tensão entre controle e liberdade", "Contexto internacional comparado"],
+    description: "Ambos abordam como a IA processa e sintetiza conhecimento, um focando em vieses e outro na evolução do conhecimento coletivo.",
+    similarities: [
+      "Análise do papel da IA no processamento de conhecimento",
+      "Perspectiva de gestão do conhecimento",
+      "Discussão sobre modelos de linguagem e LLMs",
+      "Preocupação com qualidade e validação do conhecimento",
+    ],
     differences: [
-      "Foco: infraestrutura vs. conteúdo",
-      "Ameaça: dependência externa vs. censura",
-      "Solução: desenvolvimento nacional vs. marco regulatório",
+      "Foco: vieses e distorções vs. evolução e síntese",
+      "Tom: crítico sobre riscos vs. descritivo da trajetória",
+      "Solução: supervisão humana vs. modelo híbrido",
     ],
   },
   {
     source: "7",
     target: "10",
-    description:
-      "A estratégia nacional de IA é o principal instrumento para reduzir a dependência tecnológica do Brasil.",
+    description: "Ambos enfatizam a necessidade de letramento digital para interpretar criticamente as respostas e decisões da IA.",
     similarities: [
-      "Visão estratégica nacional",
-      "Foco em desenvolvimento tecnológico",
-      "Necessidade de investimento público",
+      "Foco em letramento digital",
+      "Preocupação com interpretação crítica da IA",
+      "Necessidade de educação sobre IA",
+      "Análise de vulnerabilidades da população",
     ],
     differences: [
-      "Abordagem: diagnóstico de riscos vs. plano de ação",
-      "Escopo: dependência vs. desenvolvimento",
-      "Natureza: análise crítica vs. propositiva",
+      "Contexto: gestão do conhecimento vs. cidadania brasileira",
+      "Foco: vieses em modelos vs. analfabetismo funcional",
+      "Solução: supervisão técnica vs. políticas educacionais nacionais",
     ],
   },
-  // liberdade de expressão connections
   {
     source: "8",
-    target: "6",
-    description:
-      "A regulação de conteúdo gerado por IA é parte do debate mais amplo sobre impactos sociais da tecnologia.",
+    target: "12",
+    description: "Ambos analisam plataformas colaborativas de conhecimento, uma focando na evolução histórica e outra em genealogia.",
     similarities: [
-      "Preocupação com transformações sociais",
-      "Discussão sobre papel da tecnologia",
-      "Necessidade de equilíbrio regulatório",
+      "Análise de plataformas colaborativas de conhecimento",
+      "Foco em gestão do conhecimento",
+      "Discussão sobre memória coletiva",
+      "Tecnologia para preservar e organizar informações",
     ],
     differences: [
-      "Foco: regulação vs. impactos amplos",
-      "Perspectiva: jurídica vs. sociológica",
-      "Solução: leis vs. adaptação social",
+      "Escopo: evolução histórica geral vs. genealogia específica",
+      "Foco: trajetória do conhecimento vs. preservação de histórias familiares",
+      "Perspectiva: análise teórica vs. estudo de caso",
     ],
   },
   {
     source: "8",
     target: "13",
-    description:
-      "Tanto a regulação de IA quanto a moderação automatizada levantam questões sobre censura e liberdade de expressão.",
+    description: "Ambos abordam gestão do conhecimento, um na evolução histórica e outro na engenharia de software moderna.",
     similarities: [
-      "Tensão entre regulação e liberdade",
-      "Riscos de censura algorítmica",
-      "Necessidade de transparência",
+      "Foco em gestão do conhecimento",
+      "Análise de ferramentas digitais colaborativas",
+      "Discussão sobre ecossistemas digitais",
+      "Importância da organização e compartilhamento de conhecimento",
     ],
     differences: [
-      "Agente: estado vs. plataformas privadas",
-      "Escopo: conteúdo gerado vs. moderação",
-      "Mecanismo: leis vs. algoritmos",
-    ],
-  },
-  {
-    source: "12",
-    target: "6",
-    description:
-      "A desinformação gerada por IA é uma das principais preocupações sobre os impactos sociais da IA generativa.",
-    similarities: ["Análise de IA generativa", "Impactos negativos potenciais", "Necessidade de contramedidas"],
-    differences: [
-      "Foco: desinformação específica vs. impactos gerais",
-      "Contexto: processos democráticos vs. sociedade ampla",
-      "Urgência: imediata (eleições) vs. gradual",
+      "Escopo: evolução histórica geral vs. engenharia de software",
+      "Foco: trajetória do conhecimento vs. práticas técnicas",
+      "Perspectiva: análise teórica vs. estudo de caso prático",
     ],
   },
   {
     source: "12",
     target: "13",
-    description:
-      "A desinformação gerada por IA e a moderação automatizada são duas faces do desafio da informação online.",
+    description: "Ambos analisam sistemas de gestão do conhecimento, um em genealogia e outro em engenharia de software.",
     similarities: [
-      "Preocupação com qualidade da informação",
-      "Papel das plataformas digitais",
-      "Impacto no debate público",
+      "Análise de sistemas de gestão do conhecimento",
+      "Foco em ferramentas digitais colaborativas",
+      "Discussão sobre organização e preservação de informações",
+      "Tecnologia para facilitar acesso e compartilhamento",
     ],
     differences: [
-      "Problema: criação vs. remoção de conteúdo",
-      "Direção: produção vs. filtragem",
-      "Risco: excesso vs. falta de informação",
+      "Domínio: genealogia vs. engenharia de software",
+      "Foco: memória coletiva histórica vs. conhecimento técnico",
+      "Escala: global vs. organizacional",
     ],
   },
+  // Privacy and data protection connections
   {
-    source: "13",
-    target: "6",
-    description: "A moderação automatizada é uma aplicação específica de IA com impactos sociais significativos.",
-    similarities: ["Análise de sistemas de IA em uso", "Impactos em grande escala", "Preocupação com equidade"],
-    differences: [
-      "Escopo: moderação específica vs. IA ampla",
-      "Natureza: vigilância vs. criação",
-      "Solução: transparência vs. adaptação",
-    ],
-  },
-  // privacidade cross-cluster
-  {
-    source: "14",
-    target: "3",
-    description:
-      "O reconhecimento facial e o direito ao esquecimento são dois aspectos críticos da privacidade na era digital.",
-    similarities: ["Foco em privacidade individual", "Base legal na LGPD", "Dados biométricos como sensíveis"],
-    differences: [
-      "Tipo de dado: biométrico vs. geral",
-      "Coleta: automática vs. consentida",
-      "Contexto: espaço público vs. digital",
-    ],
-  },
-  {
-    source: "14",
-    target: "4",
-    description:
-      "Tanto a anonimização quanto o reconhecimento facial lidam com a tensão entre utilidade e privacidade de dados.",
+    source: "4",
+    target: "9",
+    description: "Ambos abordam aspectos de privacidade de dados, um focando em aprendizado federado e outro em metadados EXIF.",
     similarities: [
-      "Dados biométricos e sensíveis",
-      "Desafios técnicos de proteção",
-      "Trade-off utilidade vs. privacidade",
+      "Foco em privacidade de dados",
+      "Análise de riscos de exposição de informações",
+      "Discussão sobre proteção de dados pessoais",
+      "Preocupação com dados invisíveis ou ocultos",
     ],
     differences: [
-      "Objetivo: proteção vs. identificação",
-      "Abordagem: técnicas de anonimização vs. regulação",
-      "Contexto: datasets vs. vigilância em tempo real",
+      "Abordagem: solução técnica (federated learning) vs. análise de risco (EXIF)",
+      "Foco: treinamento de modelos vs. metadados de fotos",
+      "Perspectiva: preservação proativa vs. exposição passiva",
     ],
   },
+  // Digital inclusion connections
   {
-    source: "14",
-    target: "7",
-    description:
-      "O uso de reconhecimento facial levanta questões de soberania digital quando a tecnologia é importada.",
+    source: "10",
+    target: "11",
+    description: "Ambos discutem inclusão digital e letramento, um focando em IA e outro em idosos e governo digital.",
     similarities: [
-      "Preocupação com tecnologia estrangeira",
-      "Riscos para cidadãos brasileiros",
-      "Necessidade de regulação nacional",
+      "Foco em inclusão digital",
+      "Preocupação com vulnerabilidades de grupos específicos",
+      "Análise de barreiras ao acesso digital",
+      "Necessidade de políticas públicas e educação",
     ],
     differences: [
-      "Foco: tecnologia específica vs. dependência geral",
-      "Risco: vigilância vs. vulnerabilidade estratégica",
-      "Solução: moratória vs. desenvolvimento nacional",
+      "Grupo-alvo: população brasileira geral vs. idosos especificamente",
+      "Foco: letramento em IA vs. acesso a serviços governamentais",
+      "Risco: desinformação vs. golpes e exclusão de direitos",
     ],
   },
-  // Additional cross-cluster connections
+  // Cognitive and social impact connections
   {
-    source: "11",
-    target: "6",
-    description:
-      "A explicabilidade é fundamental para que a sociedade compreenda e confie nas decisões de sistemas de IA.",
-    similarities: ["Preocupação com confiança em IA", "Impacto em múltiplos setores", "Necessidade de transparência"],
+    source: "6",
+    target: "14",
+    description: "Ambos analisam impactos da tecnologia digital na cognição e na forma como as pessoas processam informações.",
+    similarities: [
+      "Análise de impactos cognitivos da tecnologia digital",
+      "Preocupação com atenção e processamento de informações",
+      "Discussão sobre mudanças comportamentais",
+      "Perspectiva sobre efeitos sociais da tecnologia",
+    ],
     differences: [
-      "Abordagem: técnica vs. sociológica",
-      "Escopo: decisões específicas vs. impactos gerais",
-      "Solução: métodos de XAI vs. políticas públicas",
+      "Foco: fragmentação da verdade vs. atenção e memória",
+      "Perspectiva: gestão do conhecimento vs. neurociência",
+      "Solução: validação crítica vs. adaptação comportamental",
+    ],
+  },
+  {
+    source: "8",
+    target: "14",
+    description: "Ambos analisam como a internet e tecnologias digitais transformam a forma como as pessoas acessam e processam conhecimento.",
+    similarities: [
+      "Análise da transformação digital",
+      "Foco em como as pessoas aprendem e acessam informações",
+      "Discussão sobre mudanças na cognição e comportamento",
+      "Perspectiva sobre evolução do conhecimento",
+    ],
+    differences: [
+      "Foco: evolução histórica do conhecimento vs. impactos cognitivos",
+      "Perspectiva: gestão do conhecimento vs. neurociência",
+      "Abordagem: trajetória histórica vs. análise empírica",
+    ],
+  },
+  {
+    source: "10",
+    target: "14",
+    description: "Ambos discutem como o ambiente digital afeta a cognição e a necessidade de educação para navegar essas transformações.",
+    similarities: [
+      "Análise de impactos do ambiente digital",
+      "Preocupação com processamento de informações",
+      "Necessidade de educação e letramento",
+      "Discussão sobre mudanças comportamentais",
+    ],
+    differences: [
+      "Foco: letramento em IA vs. impactos cognitivos gerais",
+      "Perspectiva: cidadania digital vs. neurociência",
+      "Solução: políticas educacionais vs. adaptação individual",
     ],
   },
 ]
@@ -383,122 +385,73 @@ export interface ClusterRelationship {
 
 export const clusterRelationships: ClusterRelationship[] = [
   {
+    cluster1: "privacidade",
+    cluster2: "ética em IA",
+    description: "A privacidade de dados é um pilar fundamental da ética em IA, especialmente em contextos sensíveis como saúde.",
+    similarities: [
+      "Preocupação com proteção de dados sensíveis",
+      "Necessidade de supervisão ética",
+      "Análise de riscos e vulnerabilidades",
+    ],
+    differences: [
+      "Foco: proteção técnica vs. dilemas éticos",
+      "Abordagem: soluções técnicas vs. reflexão crítica",
+    ],
+  },
+  {
+    cluster1: "privacidade",
+    cluster2: "cibersegurança",
+    description: "A privacidade e a cibersegurança estão intrinsecamente ligadas na proteção de dados e informações pessoais.",
+    similarities: [
+      "Foco em proteção de dados",
+      "Análise de vulnerabilidades",
+      "Preocupação com exposição de informações",
+    ],
+    differences: [
+      "Perspectiva: direitos individuais vs. defesa técnica",
+      "Abordagem: compliance vs. detecção de ameaças",
+    ],
+  },
+  {
     cluster1: "vieses",
     cluster2: "IA e sociedade",
     description: "Os vieses algorítmicos são uma das principais manifestações dos impactos sociais negativos da IA.",
     similarities: [
+      "Análise de impactos sociais da IA",
       "Preocupação com equidade e justiça",
-      "Análise de sistemas de IA existentes",
-      "Propostas de mitigação e regulação",
+      "Necessidade de educação e conscientização",
     ],
     differences: [
       "Escopo: técnico-específico vs. amplo-social",
-      "Foco: discriminação vs. transformação",
-      "Temporalidade: problemas atuais vs. cenários futuros",
+      "Foco: discriminação vs. transformação geral",
     ],
   },
   {
-    cluster1: "vieses",
-    cluster2: "governança de dados",
-    description: "A governança adequada de dados é essencial para identificar e mitigar vieses em sistemas de IA.",
-    similarities: [
-      "Foco em qualidade e integridade",
-      "Necessidade de processos estruturados",
-      "Impacto em decisões automatizadas",
-    ],
-    differences: [
-      "Perspectiva: ética vs. operacional",
-      "Objetivo: equidade vs. eficiência",
-      "Métricas: justiça vs. qualidade técnica",
-    ],
-  },
-  {
-    cluster1: "privacidade",
-    cluster2: "governança de dados",
-    description: "A privacidade é um pilar fundamental da governança de dados em qualquer organização.",
-    similarities: ["Base legal na LGPD", "Necessidade de políticas claras", "Proteção do titular de dados"],
-    differences: [
-      "Foco: direitos individuais vs. gestão organizacional",
-      "Abordagem: compliance vs. otimização",
-      "Escopo: dados pessoais vs. todos os dados",
-    ],
-  },
-  {
-    cluster1: "privacidade",
-    cluster2: "soberania nacional",
-    description:
-      "A proteção de dados dos cidadãos brasileiros está intrinsecamente ligada à soberania digital nacional.",
-    similarities: [
-      "Proteção contra agentes externos",
-      "Necessidade de infraestrutura nacional",
-      "Regulação como instrumento de defesa",
-    ],
-    differences: [
-      "Nível: individual vs. coletivo/nacional",
-      "Ameaça: empresas vs. estados estrangeiros",
-      "Solução: direitos vs. autonomia tecnológica",
-    ],
-  },
-  {
-    cluster1: "soberania nacional",
+    cluster1: "gestão do conhecimento",
     cluster2: "IA e sociedade",
-    description:
-      "O desenvolvimento autônomo de IA é estratégico para que o Brasil defina seu próprio futuro tecnológico.",
+    description: "A gestão do conhecimento precisa se adaptar aos novos desafios criados pela IA na produção e validação de informações.",
     similarities: [
-      "Visão de longo prazo para o país",
-      "Impactos em múltiplos setores",
+      "Análise de transformações na produção de conhecimento",
+      "Discussão sobre o papel da IA",
+      "Preocupação com qualidade e validação",
+    ],
+    differences: [
+      "Perspectiva: organizacional vs. social",
+      "Foco: processos vs. impactos cognitivos",
+    ],
+  },
+  {
+    cluster1: "inclusão digital",
+    cluster2: "IA e sociedade",
+    description: "A inclusão digital é essencial para que todos possam se beneficiar e participar criticamente da sociedade mediada por IA.",
+    similarities: [
+      "Foco em educação e letramento",
+      "Preocupação com vulnerabilidades",
       "Necessidade de políticas públicas",
     ],
     differences: [
-      "Perspectiva: geopolítica vs. social",
-      "Foco: independência vs. adaptação",
-      "Prioridade: segurança vs. bem-estar",
-    ],
-  },
-  {
-    cluster1: "liberdade de expressão",
-    cluster2: "IA e sociedade",
-    description:
-      "A liberdade de expressão é um direito fundamental afetado pelas transformações sociais causadas pela IA.",
-    similarities: [
-      "Preocupação com direitos fundamentais",
-      "Impacto das plataformas digitais",
-      "Necessidade de equilíbrio regulatório",
-    ],
-    differences: [
-      "Foco: direito específico vs. transformação ampla",
-      "Ameaça: censura vs. disrupção",
-      "Solução: garantias legais vs. adaptação social",
-    ],
-  },
-  {
-    cluster1: "liberdade de expressão",
-    cluster2: "soberania nacional",
-    description: "A regulação de conteúdo online deve equilibrar liberdade de expressão com interesses nacionais.",
-    similarities: [
-      "Tensão entre controle e liberdade",
-      "Papel do estado como regulador",
-      "Comparação com outros países",
-    ],
-    differences: [
-      "Prioridade: direitos individuais vs. interesse nacional",
-      "Ameaça: censura interna vs. interferência externa",
-      "Abordagem: garantias vs. proteção",
-    ],
-  },
-  {
-    cluster1: "governança de dados",
-    cluster2: "soberania nacional",
-    description: "A governança de dados em instituições públicas é estratégica para a soberania digital do Brasil.",
-    similarities: [
-      "Foco no setor público",
-      "Necessidade de capacitação nacional",
-      "Infraestrutura como ativo estratégico",
-    ],
-    differences: [
-      "Escala: institucional vs. nacional",
-      "Objetivo: eficiência vs. independência",
-      "Horizonte: operacional vs. estratégico",
+      "Grupo-alvo: específico vs. geral",
+      "Foco: acesso vs. impactos cognitivos",
     ],
   },
 ]
@@ -511,3 +464,4 @@ export function getClusterRelationship(cluster1: string, cluster2: string): Clus
       (rel.cluster1 === cluster2 && rel.cluster2 === cluster1),
   )
 }
+
