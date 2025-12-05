@@ -40,10 +40,10 @@ export function StatsCards() {
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
       {stats.map((stat) => (
-        <Card key={stat.label} className="border-border/50 bg-card/50">
+        <Card key={stat.label} className="border-border/50 bg-card/50 py-2">
           <CardContent className="flex items-center gap-3 p-4">
             <div
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+              className="flex size-10 shrink-0 items-center justify-center rounded-lg"
               style={{ backgroundColor: `${stat.color}20` }}
             >
               <stat.icon className="h-5 w-5" style={{ color: stat.color }} />

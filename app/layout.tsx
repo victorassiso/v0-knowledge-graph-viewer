@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Grafo de Conhecimento | Gestão do Conhecimento",
   description:
     "Visualização interativa de relatórios de pesquisa sobre IA, privacidade, governança de dados e sociedade.",
-  keywords: ["gestão do conhecimento", "grafo de conhecimento", "IA", "privacidade", "governança de dados"],
+  keywords: ["Gestão do Conhecimento", "Grafo de Conhecimento", "IA", "Privacidade", "Governança de Dados"],
   generator: "v0.app",
   icons: {
     icon: [

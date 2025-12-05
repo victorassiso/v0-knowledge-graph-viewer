@@ -4,6 +4,7 @@ export interface ReportLink {
   description: string
   similarities: string[]
   differences: string[]
+  report_link?: string
 }
 
 export const reportLinks: ReportLink[] = [
@@ -385,8 +386,8 @@ export interface ClusterRelationship {
 
 export const clusterRelationships: ClusterRelationship[] = [
   {
-    cluster1: "privacidade",
-    cluster2: "ética em IA",
+    cluster1: "Privacidade",
+    cluster2: "Ética em IA",
     description: "A privacidade de dados é um pilar fundamental da ética em IA, especialmente em contextos sensíveis como saúde.",
     similarities: [
       "Preocupação com proteção de dados sensíveis",
@@ -399,8 +400,8 @@ export const clusterRelationships: ClusterRelationship[] = [
     ],
   },
   {
-    cluster1: "privacidade",
-    cluster2: "cibersegurança",
+    cluster1: "Privacidade",
+    cluster2: "Cibersegurança",
     description: "A privacidade e a cibersegurança estão intrinsecamente ligadas na proteção de dados e informações pessoais.",
     similarities: [
       "Foco em proteção de dados",
@@ -413,7 +414,7 @@ export const clusterRelationships: ClusterRelationship[] = [
     ],
   },
   {
-    cluster1: "vieses",
+    cluster1: "Vieses",
     cluster2: "IA e sociedade",
     description: "Os vieses algorítmicos são uma das principais manifestações dos impactos sociais negativos da IA.",
     similarities: [
@@ -427,7 +428,7 @@ export const clusterRelationships: ClusterRelationship[] = [
     ],
   },
   {
-    cluster1: "gestão do conhecimento",
+    cluster1: "Gestão do conhecimento",
     cluster2: "IA e sociedade",
     description: "A gestão do conhecimento precisa se adaptar aos novos desafios criados pela IA na produção e validação de informações.",
     similarities: [
@@ -441,7 +442,7 @@ export const clusterRelationships: ClusterRelationship[] = [
     ],
   },
   {
-    cluster1: "inclusão digital",
+    cluster1: "Inclusão digital",
     cluster2: "IA e sociedade",
     description: "A inclusão digital é essencial para que todos possam se beneficiar e participar criticamente da sociedade mediada por IA.",
     similarities: [
