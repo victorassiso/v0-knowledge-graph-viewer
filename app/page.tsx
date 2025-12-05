@@ -57,7 +57,7 @@ function HomeContent() {
             </div>
             <div>
               <h1 className="text-lg font-semibold text-foreground">Grafo de Conhecimento</h1>
-              <p className="text-xs text-muted-foreground">Gestão do Conhecimento - 2024</p>
+              <p className="text-xs text-muted-foreground">COP232 - Gestão do Conhecimento - 2025.2</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
