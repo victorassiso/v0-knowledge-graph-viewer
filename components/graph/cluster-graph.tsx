@@ -179,19 +179,19 @@ export function ClusterGraph() {
 
         const relationship = getClusterRelationship(sourceId, targetId)
 
-        if (relationship) {
-          setEdgePopover({
-            data: {
-              sourceTitle: sourceId,
-              targetTitle: targetId,
-              description: relationship.description,
-              similarities: relationship.similarities,
-              differences: relationship.differences,
-            },
-            position: { x: event.pageX, y: event.pageY },
-            visible: true,
-          })
-        }
+        // if (relationship) {
+        //   setEdgePopover({
+        //     data: {
+        //       sourceTitle: sourceId,
+        //       targetTitle: targetId,
+        //       description: relationship.description,
+        //       similarities: relationship.similarities,
+        //       differences: relationship.differences,
+        //     },
+        //     position: { x: event.pageX, y: event.pageY },
+        //     visible: true,
+        //   })
+        // }
       })
       .on("mousemove", (event) => {
         setEdgePopover((prev) => ({

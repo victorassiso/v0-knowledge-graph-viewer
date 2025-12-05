@@ -52,7 +52,7 @@ A aplicação de Modelos Grandes de Linguagem Pequenos (sLLMs) na área da saúd
 
 
 Foram conduzidos dois experimentos utilizando IA local (modelos Phi-4 e Llama 3.2) para análise de valência hedônica e classificação de intenções em entrevistas motivacionais. Os resultados comprovam a viabilidade técnica da execução local, embora alertem para desafios críticos como o viés de centralidade e a dependência de contexto histórico para decisões clínicas precisas.`,
-    links: ["2", "4", "7", "10"],
+    links: ["2", "4", "7"],
     report_link: "https://drive.google.com/drive/folders/1dRTx0jPZVqzbG04WQclrWoI2khIodEv7",
   },
   {
@@ -136,7 +136,7 @@ Por outro lado, o texto detalha como a IA é essencial para a defesa moderna, pe
 A dependência tradicional de servidores centralizados para o treinamento de Inteligência Artificial enfrenta hoje barreiras críticas relacionadas à proteção de dados sensíveis e aos custos de transmissão. O Aprendizado Federado inverte essa lógica, permitindo que dispositivos aprendam localmente e compartilhem apenas conhecimento, sem expor as informações brutas.
 
 Este trabalho analisa a viabilidade técnica e ética desse método através de casos de uso na predição de doenças e mobilidade urbana. Além disso, apresenta experimentos práticos comparando arquiteturas síncronas e assíncronas, demonstrando como a abordagem assíncrona oferece maior robustez e eficiência em cenários reais de conexão instável e dados heterogêneos.`,
-    links: ["1", "2", "7"],
+    links: ["1", "2"],
   },
   {
     id: "5",
@@ -278,7 +278,7 @@ Conclui-se que o futuro da gestão do conhecimento reside em um modelo híbrido.
 ## Introdução
 
 A popularização das câmeras digitais e dos smartphones transformou cada fotografia em um pacote de dados invisíveis — os metadados EXIF. Esses registros, muitas vezes desconhecidos pelos usuários, podem incluir localização GPS, data, hora, modelo da câmera e diversas configurações técnicas. A análise do funcionamento interno do formato EXIF revela tanto sua utilidade quanto seus riscos. Casos reais, como o de John McAfee e o episódio do Burger King, demonstram como esses metadados podem expor pessoas, revelar crimes ou gerar consequências inesperadas. O relatório explora a estrutura técnica dos arquivos EXIF, suas vulnerabilidades, debates éticos e o impacto da preservação ou remoção desses dados por plataformas digitais.`,
-    links: ["3", "4", "10"],
+    links: ["3", "4"],
     report_link: "https://docs.google.com/document/d/1vr4Pr26CeTC_Mrtq8plpTIy3mUl-1vHw8nsot-SAo-o/edit?usp=drivesdk"
   },
   {

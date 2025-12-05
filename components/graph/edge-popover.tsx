@@ -74,7 +74,7 @@ export function EdgePopover({ data, position, visible }: EdgePopoverProps) {
           </div>
         )}
 
-        {/* Differences */}
+        {/* Differences
         {data.differences.length > 0 && (
           <div>
             <h5 className="text-xs font-semibold text-amber-500 mb-1.5 flex items-center gap-1.5">
@@ -92,7 +92,7 @@ export function EdgePopover({ data, position, visible }: EdgePopoverProps) {
               ))}
             </ul>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   )
